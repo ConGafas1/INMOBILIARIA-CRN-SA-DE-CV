@@ -1,0 +1,6 @@
+{
+  "name": "Inmobiliaria CRM S.A. de C.V.",
+  "description": "Sitio web corporativo y profesional de Inmobiliaria CRM S.A. de C.V., expertos en pavimentos, terracerías, acabados y tablaroca en México.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
