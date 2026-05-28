@@ -5,8 +5,56 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Phone, Mail, Building2 } from 'lucide-react';
+import { Menu, X, Phone, Mail } from 'lucide-react';
 import { COMPANY_INFO } from '../data';
+
+function FoundationLogoIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg 
+      viewBox="0 0 512 512" 
+      fill="currentColor" 
+      className={`${className} transition-transform duration-300`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        {/* Transparent hole masking for modern aesthetic look */}
+        <mask id="concrete-dots">
+          <rect x="0" y="0" width="512" height="512" fill="white" />
+          <circle cx="188" cy="340" r="13" fill="black" />
+          <circle cx="218" cy="385" r="13" fill="black" />
+          <circle cx="185" cy="425" r="13" fill="black" />
+          <circle cx="248" cy="350" r="13" fill="black" />
+          <circle cx="248" cy="420" r="13" fill="black" />
+          <circle cx="280" cy="380" r="13" fill="black" />
+          <circle cx="318" cy="355" r="13" fill="black" />
+          <circle cx="310" cy="425" r="13" fill="black" />
+        </mask>
+      </defs>
+      
+      {/* Steel reinforcement framework cage (rebar mesh) */}
+      {/* 3 Vertical structural rebar pillars */}
+      <rect x="178" y="55" width="16" height="240" rx="4" />
+      <rect x="248" y="55" width="16" height="240" rx="4" />
+      <rect x="318" y="55" width="16" height="240" rx="4" />
+      
+      {/* 5 Horizontal reinforcing steel ties */}
+      <rect x="164" y="85" width="184" height="16" rx="4" />
+      <rect x="164" y="130" width="184" height="16" rx="4" />
+      <rect x="164" y="175" width="184" height="16" rx="4" />
+      <rect x="164" y="220" width="184" height="16" rx="4" />
+      <rect x="164" y="265" width="184" height="16" rx="4" />
+      
+      {/* Left thick concrete border column with flared base footing */}
+      <path d="M98 108 H143 V455 H42 V380 L98 312 V108 Z" />
+      
+      {/* Right thick concrete border column with flared base footing */}
+      <path d="M414 108 H369 V455 H470 V380 L414 312 V108 Z" />
+
+      {/* Central Fresh Concrete bed filling, supporting reinforcing cage foundation */}
+      <path d="M157 455 H355 V308 C310 298 280 322 256 308 C232 294 200 316 157 308 V455 Z" mask="url(#concrete-dots)" />
+    </svg>
+  );
+}
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -74,11 +122,11 @@ export default function Header() {
           <a 
             href="#inicio" 
             onClick={(e) => handleLinkClick(e, '#inicio')}
-            className="flex items-center space-x-2 group"
+            className="flex items-center space-x-2.5 group"
           >
-            {/* Styled wheelbarrow-like emblem to replicate original branding / logo */}
-            <div className="relative w-10 h-10 bg-corporate-blue flex items-center justify-center rounded border border-corporate-orange/40 overflow-hidden shadow-inner shrink-0">
-              <Building2 className="w-5 h-5 text-white relative z-10 group-hover:scale-110 transition-transform duration-300" />
+            {/* Styled custom vector emblem to replicate original foundation / rebar concrete branding */}
+            <div className="relative w-12 h-12 bg-corporate-blue flex items-center justify-center rounded border border-corporate-orange/40 overflow-hidden shadow-inner shrink-0">
+              <FoundationLogoIcon className="w-8 h-8 text-white relative z-10 group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute right-0 bottom-0 w-3 h-3 bg-corporate-orange rotate-45 transform translate-x-1.5 translate-y-1.5"></div>
             </div>
             <div className="flex flex-col">
@@ -145,9 +193,9 @@ export default function Header() {
           >
             {/* Header within overlay for dismissal */}
             <div className="flex justify-between items-center p-6 border-b border-slate-800">
-              <div className="flex items-center space-x-2">
-                <div className="w-9 h-9 bg-corporate-blue flex items-center justify-center rounded">
-                  <Building2 className="w-5 h-5 text-white" />
+              <div className="flex items-center space-x-2.5">
+                <div className="w-11 h-11 bg-corporate-blue flex items-center justify-center rounded">
+                  <FoundationLogoIcon className="w-7 h-7 text-white" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-display font-bold text-white text-base">
