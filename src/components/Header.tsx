@@ -82,10 +82,10 @@ export default function Header() {
               <div className="absolute right-0 bottom-0 w-3 h-3 bg-corporate-orange rotate-45 transform translate-x-1.5 translate-y-1.5"></div>
             </div>
             <div className="flex flex-col">
-              <span className={`font-display font-bold tracking-tight text-lg leading-tight transition-colors duration-300 ${isScrolled ? 'text-corporate-dark' : 'text-corporate-dark md:text-white'}`}>
+              <span className="font-display font-bold tracking-tight text-lg leading-tight text-corporate-dark transition-colors duration-300">
                 INMOBILIARIA <span className="text-corporate-orange">CRM</span>
               </span>
-              <span className={`font-mono text-[9px] tracking-widest leading-none ${isScrolled ? 'text-slate-500' : 'text-slate-300'}`}>
+              <span className="font-mono text-[9px] tracking-widest leading-none text-slate-500">
                 S.A. DE C.V.
               </span>
             </div>
