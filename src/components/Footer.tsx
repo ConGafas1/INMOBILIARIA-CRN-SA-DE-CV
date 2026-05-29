@@ -124,7 +124,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
           <div className="space-y-1">
             <p className="font-medium tracking-wide">
-              © 2025 Website by <a href="http://inkmark.mx" target="_blank" rel="noopener noreferrer" className="text-corporate-orange hover:underline font-bold inline-flex items-center space-x-0.5">
+              © 2026 Website by <a href="http://inkmark.mx" target="_blank" rel="noopener noreferrer" className="text-corporate-orange hover:underline font-bold inline-flex items-center space-x-0.5">
                 <span>inkmark.mx</span>
                 <ExternalLink size={10} className="inline" />
               </a>
